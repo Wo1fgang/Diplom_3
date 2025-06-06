@@ -2,6 +2,7 @@ BASE_URL = 'https://stellarburgers.nomoreparties.site/'
 FORGOT_PASSWORD_PAGE = 'forgot-password'
 RESET_PASSWORD_PAGE = 'reset-password'
 FEED = 'feed'
+
 EMAIL_TO_RECOVER_PASSWORD = 'abrakadabra123@yandex.ru'
 SOME_PASSWORD = 'testtest'
 

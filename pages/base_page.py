@@ -2,7 +2,7 @@ from selenium.common import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait as Wait
 
-from locators.general_locators import OVERLAYING_ELEMENT
+from locators.general_locators import GeneralLocators
 from data import script
 
 
@@ -43,7 +43,7 @@ class BasePage:
     def wait_for_modal_to_disappear(self):
         try:
             Wait(self.driver, 20).until_not(
-                EC.visibility_of_element_located(OVERLAYING_ELEMENT)
+                EC.visibility_of_element_located(GeneralLocators.OVERLAYING_ELEMENT)
             )
         except TimeoutException:
             raise TimeoutException("Модальное окно не исчезло в течение 20 секунд")
